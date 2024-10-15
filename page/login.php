@@ -48,7 +48,7 @@ if (isset($_SESSION['id_user'])) { // Ganti 'user_id' dengan nama sesi yang sesu
                         <div class="row">
                             <div class="col-lg-6 d-lg-block bg-dark shadow-lg p-5 text-center"> <!-- Menambahkan margin-top -->
                                 <img src="../assets/img/logo.jpg " style="width: 180px; border-radius: 50px;" alt="">
-                                <h3 class="text-white"><small>Buku Tamu</small>
+                                <h3 class="text-white"><small>Buku Kunjungan</small>
                                 <br> UPTD Pendapatan Daerah Wilayah 4
                                 <br> <small>Samarinda, Kalimantan Timur</small>
                                 </h3>
