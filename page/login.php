@@ -1,3 +1,13 @@
+<?php 
+include "session.php";
+
+// Cek apakah pengguna sudah login
+if (isset($_SESSION['id_user'])) { // Ganti 'user_id' dengan nama sesi yang sesuai
+    echo "<script>document.location='base.php';</script>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

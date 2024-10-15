@@ -1,7 +1,5 @@
 <?php
-
-// Mulai sesi
-session_start();
+include "session.php";
 
 // Tentukan durasi timeout dalam detik (30 menit = 1800 detik)
 $timeout_duration = 1800;
