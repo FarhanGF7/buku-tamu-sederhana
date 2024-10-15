@@ -5,7 +5,7 @@ include "header.php";
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Daftar Kunjungan</h1>
+    <h1 class="h2 mb-0 text-gray-800">Daftar Kunjungan</h1>
 </div>
 
 <!-- DataTales Example -->
@@ -14,10 +14,12 @@ include "header.php";
         <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Keseluruhan</h6>
     </div>
     <div class="card-body">
-        <button class="btn btn-success mb-3" data-toggle="modal" data-target="#visitorModal"><i class="fa fa-plus-square"></i> Isi Kunjungan</button>
+        <a href="rekapitulasi.php" class="btn btn-primary mb-3">
+            <i class="fas fa-calculator"></i> Rekapitulasi
+        </a>
         <form action="exportkeseluruhan.php" method="post" class="d-none d-sm-inline-block mb-3">
-            <button type="submit" name="bexport" class="btn btn-outline-primary shadow-sm mb-3">
-                <i class="fas fa-download fa-sm"></i> Excel
+            <button type="submit" name="bexport" class="btn btn-outline-success shadow-sm mb-3">
+                <i class="fas fa-file-excel-o fa-sm"></i> Export
             </button>
         </form>
 
@@ -61,10 +63,8 @@ include "header.php";
     </div>
 </div>
 
-<?php include 'form.php'; ?>
+
 
 <?php include 'update.php'; ?>
-
-
 
 <?php include "footer.php"; ?>

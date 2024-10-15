@@ -19,12 +19,12 @@ if (isset($_POST['bsimpan'])) {
     // uji simpan data jika sukses
     if ($simpan) {
         echo "<script>alert('Simpan data Sukses, Terima kasih..!');
-            document.location='daftar-pengunjung.php?'</script>";
+            document.location='base.php?'</script>";
     } else {
         echo "<script>alert('Simpan data GAGAL: " .
             mysqli_error($koneksi) .
             "');
-            document.location='daftar-pengunjung.php?'</script>"; // Tampilkan error dari MySQL
+            document.location='base.php?'</script>"; // Tampilkan error dari MySQL
     }
 } 
 

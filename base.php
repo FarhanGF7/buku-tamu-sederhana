@@ -4,7 +4,7 @@ include "header.php";
 ?>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang di Daftar Kunjungan Wajib Pajak <br>UPTD Pendapatan Daerah Wilayah 4 </h1>                        
+                        <h1 class="h2 mb-0 text-gray-800">Selamat Datang di Daftar Kunjungan Wajib Pajak <br>UPTD Pendapatan Daerah Wilayah 4 </h1>                        
                     </div>
 
                     <!-- Content Row -->
@@ -159,9 +159,10 @@ include "header.php";
                                     ) ?>]</h6>
                                 </div>
                                 <div class="card-body">
+                                <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#visitorModal"><i class="fa fa-plus-square"></i> Isi Kunjungan</button>
                                 <form action="exportnow.php" method="post" class="d-none d-sm-inline-block mb-3">
-                                    <button type="submit" name="bexport" class="btn btn-outline-primary shadow-sm mb-3">
-                                        <i class="fas fa-download fa-sm"></i> Excel
+                                    <button type="submit" name="bexport" class="btn btn-outline-success shadow-sm mb-3">
+                                        <i class="fas fa-file-excel-o fa-sm"></i> Export
                                     </button>
                                 </form>
 
@@ -206,6 +207,6 @@ include "header.php";
 
                     </div>
 
-             
+<?php include 'form.php'; ?>
 
 <?php include "footer.php"; ?>

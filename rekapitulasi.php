@@ -4,7 +4,7 @@ include "header.php";
 ?>
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Rekap Data Kunjungan  </h1>
+    <h1 class="h2 mb-0 text-gray-800">Rekap Data Kunjungan  </h1>
 </div>
 
 <!-- Awal Row -->
@@ -12,7 +12,7 @@ include "header.php";
     <!-- Awal col-md-12 -->
     <div class="col-md-12">
         <!-- Awal card -->
-        <div class="card shadow mb-4 mt-5">
+        <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Rekapitulasi Pengunjung</h6>
             </div>
@@ -117,7 +117,6 @@ include "header.php";
     <!-- Akhir col-md-12 -->
 </div>
 <!-- Akhir Row -->
-
 
 
 <?php include "footer.php"; ?>
