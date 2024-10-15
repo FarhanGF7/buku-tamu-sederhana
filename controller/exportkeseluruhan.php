@@ -15,7 +15,7 @@ if (isset($_POST['bexport'])) {
     $sheet->setCellValue('B1', 'Tanggal');
     $sheet->setCellValue('C1', 'Nama Pengunjung');
     $sheet->setCellValue('D1', 'Alamat');
-    $sheet->setCellValue('E1', 'Tujuan');
+    $sheet->setCellValue('E1', 'Urusan');
     $sheet->setCellValue('F1', 'No. HP');
 
     // Set header teks menjadi tebal

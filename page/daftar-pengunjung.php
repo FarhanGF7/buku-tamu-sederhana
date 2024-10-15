@@ -31,7 +31,7 @@ include "header.php";
                         <th>Tanggal</th>
                         <th>Nama Pengunjung</th>
                         <th>Alamat</th>
-                        <th>Tujuan</th>
+                        <th>Urusan</th>
                         <th>No. HP</th>
                         <th>Aksi</th>
                     </tr>
