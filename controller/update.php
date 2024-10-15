@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php'; // Pastikan koneksi database sudah ada
+include '../database/koneksi.php'; // Pastikan koneksi database sudah ada
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
@@ -15,13 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Redirect atau pesan sukses
         echo "<script>
                 alert('Data berhasil diperbarui!');
-                document.location= 'daftar-pengunjung.php';
+                document.location= '../page/daftar-pengunjung.php';
               </script>";
     } else {
         // Redirect atau pesan error
         echo "<script>
                 alert('Terjadi kesalahan saat memperbarui data.');
-                document.location= 'daftar-pengunjung.php';
+                document.location= '../page/daftar-pengunjung.php';
               </script>";   
     }
 }
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </button>
             </div>
             <div class="modal-body">
-                <form action="update.php" method="POST">
+                <form action="../controller/update.php" method="POST">
                     <input type="hidden" name="id" value="<?= $data['id'] ?>">
                     <div class="form-group">
                         <label for="nama">Nama Pengunjung</label>

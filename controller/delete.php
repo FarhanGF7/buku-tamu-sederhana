@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php'; // Pastikan koneksi database sudah ada
+include '../database/koneksi.php'; // Pastikan koneksi database sudah ada
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -11,13 +11,13 @@ if (isset($_GET['id'])) {
         // Redirect atau pesan sukses
         
         echo "<script>alert('Hapus data Sukses, Terima Kasih..!');
-            document.location='daftar-pengunjung.php?'</script>";
+            document.location='../page/daftar-pengunjung.php?'</script>";
     } else {
         // Redirect atau pesan error
         echo "<script>alert('Hapus data GAGAL: " .
             mysqli_error($koneksi) .
             "');
-            document.location='daftar-pengunjung.php?'</script>";
+            document.location='../page/daftar-pengunjung.php?'</script>";
     }
 }
 ?>
@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <a href="delete.php?id=<?= $data['id'] ?>" class="btn btn-danger">Hapus</a>
+                <a href="../controller/delete.php?id=<?= $data['id'] ?>" class="btn btn-danger">Hapus</a>
             </div>
         </div>
     </div>

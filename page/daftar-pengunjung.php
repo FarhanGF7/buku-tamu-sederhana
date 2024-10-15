@@ -17,7 +17,7 @@ include "header.php";
         <a href="rekapitulasi.php" class="btn btn-primary mb-3">
             <i class="fas fa-calculator"></i> Rekapitulasi
         </a>
-        <form action="exportkeseluruhan.php" method="post" class="d-none d-sm-inline-block mb-3">
+        <form action="../controller/exportkeseluruhan.php" method="post" class="d-none d-sm-inline-block mb-3">
             <button type="submit" name="bexport" class="btn btn-outline-success shadow-sm mb-3">
                 <i class="fas fa-file-excel-o fa-sm"></i> Export
             </button>
@@ -50,11 +50,11 @@ include "header.php";
                             <td><?= $data['tujuan'] ?></td>
                             <td><?= $data['nope'] ?></td>
                             <td>
-                                <a href="update.php" class="btn btn-warning btn-sm shadow-sm" data-toggle="modal" data-target="#updateModal<?= $data['id'] ?>">Edit</a> <!-- Tombol update yang memicu modal -->
+                                <a href="../controller/update.php" class="btn btn-warning btn-sm shadow-sm" data-toggle="modal" data-target="#updateModal<?= $data['id'] ?>">Edit</a> <!-- Tombol update yang memicu modal -->
                                 <button class="btn btn-danger btn-sm shadow-sm" data-toggle="modal" data-target="#deleteModal<?= $data['id'] ?>">Hapus</button>
                             </td>
                         </tr>
-                        <?php include 'delete.php'; ?>
+                        <?php include '../controller/delete.php'; ?>
                     <?php }
                     ?>
                 </tbody>
@@ -65,6 +65,6 @@ include "header.php";
 
 
 
-<?php include 'update.php'; ?>
+<?php include '../controller/update.php'; ?>
 
 <?php include "footer.php"; ?>

@@ -4,7 +4,7 @@ include "header.php";
 ?>
 
 <?php 
-include "koneksi.php"; // Sertakan koneksi database
+include "../database/koneksi.php"; // Sertakan koneksi database
 
 // Cek apakah pengguna sudah login
 if (!isset($_SESSION['id_user'])) {

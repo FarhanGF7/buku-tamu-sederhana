@@ -42,7 +42,7 @@ include "header.php";
 
                         </div>
                         <div class="col-md-2">
-                            <a href="admin.php" class="btn btn-outline-danger form-control">
+                            <a href="base.php" class="btn btn-outline-danger form-control">
                                 <i class="fa fa-backward"></i> Kembali
                             </a>
                         </div>
@@ -98,7 +98,7 @@ include "header.php";
                     
                     <div class="row justify-content-center">
                         <div class="col-md-2">
-                            <form action="exportexcel.php" method="POST">
+                            <form action="../controller/exportexcel.php" method="POST">
                                 <input type="hidden" name="tanggala" value="<?= @$_POST['tanggal1'] ?>">  
                                 <input type="hidden" name="tanggalb" value="<?= @$_POST['tanggal2'] ?>">
                                 <button class="btn btn-success form-control" name="bexport">

@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include '../database/koneksi.php';
 
 // Uji Jika tombol simpan diklik
 if (isset($_POST['bsimpan'])) {
@@ -19,12 +19,12 @@ if (isset($_POST['bsimpan'])) {
     // uji simpan data jika sukses
     if ($simpan) {
         echo "<script>alert('Simpan data Sukses, Terima kasih..!');
-            document.location='base.php?'</script>";
+            document.location='../page/base.php?'</script>";
     } else {
         echo "<script>alert('Simpan data GAGAL: " .
             mysqli_error($koneksi) .
             "');
-            document.location='base.php?'</script>"; // Tampilkan error dari MySQL
+            document.location='../page/base.php?'</script>"; // Tampilkan error dari MySQL
     }
 } 
 
@@ -41,7 +41,7 @@ if (isset($_POST['bsimpan'])) {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="user" method="POST" action="form.php"> 
+                        <form class="user" method="POST" action="../controller/form.php"> 
                             <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>" /> <!-- CSRF Token -->
                             <div class="mb-3 form-group">
                                 <label for="nama">Nama Pengunjung</label>

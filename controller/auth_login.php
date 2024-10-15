@@ -2,8 +2,7 @@
 session_start();
 
 // Koneksi database
-include "koneksi.php";
-include "login.php";
+include "../database/koneksi.php";
 
 // Sanitasi input pengguna
 $username = mysqli_escape_string($koneksi, $_POST['username']);
@@ -15,15 +14,21 @@ AND password = '$password' AND status = 'Aktif' ");
 
 $data = mysqli_fetch_array($login);
 
+// koneksi login page
+include "../page/login.php"; 
+
 // Periksa apakah username dan password benar
 if ($data) {
     $_SESSION['id_user'] = $data['id_user'];
     $_SESSION['username'] = $data['username'];
     $_SESSION['password'] = $data['password'];
     $_SESSION['nama_pengguna'] = $data['nama_pengguna'];
+    
+    // Set session login status
+    $_SESSION['loggedin'] = true;
 
     // Redirect ke halaman admin
-    header('location:base.php');
+    echo '<script>document.location = "../page/base.php";</script>';
 } else {
     // Modal HTML untuk kesalahan login
     echo '
@@ -40,7 +45,7 @@ if ($data) {
                     Username atau password yang Anda masukkan salah.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href=\'login.php\'">Tutup</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href=\'../page/login.php\'">Tutup</button>
                 </div>
             </div>
         </div>

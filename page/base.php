@@ -160,7 +160,7 @@ include "header.php";
                                 </div>
                                 <div class="card-body">
                                 <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#visitorModal"><i class="fa fa-plus-square"></i> Isi Kunjungan</button>
-                                <form action="exportnow.php" method="post" class="d-none d-sm-inline-block mb-3">
+                                <form action="../controller/exportnow.php" method="post" class="d-none d-sm-inline-block mb-3">
                                     <button type="submit" name="bexport" class="btn btn-outline-success shadow-sm mb-3">
                                         <i class="fas fa-file-excel-o fa-sm"></i> Export
                                     </button>
@@ -207,6 +207,6 @@ include "header.php";
 
                     </div>
 
-<?php include 'form.php'; ?>
+<?php include '../controller/form.php'; ?>
 
 <?php include "footer.php"; ?>

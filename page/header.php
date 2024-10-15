@@ -55,13 +55,13 @@ if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESS
     <title><?php echo isset($page_title) ? $page_title : 'Default Title'; ?></title>
 
     <!-- Custom fonts for this template-->
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="icon" href="../assets/img/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/font-awesome.min.css" integrity="sha512-Fo3rlrZj/k7ujTnDd2eOvqHU0FgEYZh65O1JbV0FlJzFv4g+JkTkaKtL0pvkwkZgoBmKPqad8htBRY5Rhz7Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -76,7 +76,7 @@ if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESS
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="base.php">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <img src="assets/img/logo.jpg" alt="" style="width: 30px; height: auto; border-radius: 50px;">
+                    <img src="../assets/img/logo.jpg" alt="" style="width: 30px; height: auto; border-radius: 50px;">
                 </div>
                 <div class="sidebar-brand-text mx-3">Buku Tamu</div>
             </a>
@@ -140,7 +140,7 @@ if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESS
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['nama_pengguna']); ?></span>
-                                <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -161,4 +161,4 @@ if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESS
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <?php include "koneksi.php"; ?>
+                    <?php include "../database/koneksi.php"; ?>

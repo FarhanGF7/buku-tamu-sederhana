@@ -1,6 +1,6 @@
 <?php
-require 'assets/vendor/autoload.php'; // Memuat PhpSpreadsheet
-require 'koneksi.php';
+require '../assets/vendor/autoload.php'; // Memuat PhpSpreadsheet
+require '../database/koneksi.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

@@ -11,15 +11,15 @@
     <title>Login | Buku Kunjungan Badan Pendapatan UPTD Wilayah 4</title>
 
     <!-- Custom fonts for this template-->
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="../assets/img/logo.jpg" type="image/x-icon">
     <!-- Custom styles for this template-->
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -37,7 +37,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-lg-block bg-dark shadow-lg p-5 text-center"> <!-- Menambahkan margin-top -->
-                                <img src="assets/img/logo.jpg " style="width: 180px; border-radius: 50px;" alt="">
+                                <img src="../assets/img/logo.jpg " style="width: 180px; border-radius: 50px;" alt="">
                                 <h3 class="text-white"><small>Buku Tamu</small>
                                 <br> UPTD Pendapatan Daerah Wilayah 4
                                 <br> <small>Samarinda, Kalimantan Timur</small>
@@ -48,7 +48,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Selamat Datang</h1>
                                     </div>
-                                    <form class="user" action="auth_login.php" method="POST">
+                                    <form class="user" action="../controller/auth_login.php" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -79,14 +79,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/js/sb-admin-2.min.js"></script>
     
 
 </body>

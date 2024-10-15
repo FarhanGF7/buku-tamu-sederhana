@@ -1,6 +1,6 @@
 <?php
-require 'assets/vendor/autoload.php'; // Memuat PhpSpreadsheet
-require 'koneksi.php';
+require '../assets/vendor/autoload.php'; // Memuat PhpSpreadsheet
+require '../database/koneksi.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -32,13 +32,15 @@ if (isset($_POST['bexport'])) {
     ];
     $sheet->getStyle('A1:F1')->applyFromArray($styleArray);
 
-    // Ambil data dari database tanpa filter tanggal
-    $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu ORDER BY DATE(tanggal) ASC");
-
     // Set lebar kolom otomatis
     foreach (range('A', 'F') as $columnID) {
         $sheet->getColumnDimension($columnID)->setAutoSize(true);
     }
+
+
+    // Ambil data dari database berdasarkan tanggal hari ini
+    $tgl = date('Y-m-d');
+    $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu WHERE tanggal like '%$tgl%' ORDER BY tanggal ASC");
 
     $row = 2; // Mulai dari baris kedua
     $no = 1;
@@ -62,9 +64,10 @@ if (isset($_POST['bexport'])) {
     // Set border untuk data
     $sheet->getStyle('A2:F' . ($row - 1))->applyFromArray($styleArray);
 
+
     // Set nama file dan simpan file
     $writer = new Xlsx($spreadsheet);
-    $filename = 'Rekapitulasi_Pengunjung_Seluruh_' . date('Y-m-d') . '.xlsx';
+    $filename = 'Rekapitulasi_Pengunjung_Hari_Ini_' . date('Y-m-d') . '.xlsx';
 
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     header('Content-Disposition: attachment; filename="' . $filename . '"');
