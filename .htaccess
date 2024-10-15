@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Cek apakah pengguna sudah login atau belum
+RewriteCond %{REQUEST_URI} ^/bukutamu/(.*)$
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.*)$ check_login.php [L]
