@@ -1,4 +1,7 @@
-<?php include "header.php"; ?>
+<?php 
+$page_title = "Profil Akun | Buku Kunjungan";
+include "header.php"; 
+?>
 
 <?php 
 include "koneksi.php"; // Sertakan koneksi database

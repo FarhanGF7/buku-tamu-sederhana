@@ -52,7 +52,7 @@ if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESS
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Dashboard Buku Tamu</title>
+    <title><?php echo isset($page_title) ? $page_title : 'Default Title'; ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
