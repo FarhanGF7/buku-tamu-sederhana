@@ -22,7 +22,18 @@
     <h1>Selamat Datang di Halaman Kami!</h1>
     <p>Terima kasih telah mengunjungi situs kami</p>
 
-    <button onclick="window.location.href='page/base.php'">Ke Halaman Dashboard</button>
-    <button onclick="window.location.href='page/login.php'">Ke Halaman Login</button>
+    <button onclick="navigateTo('base.php')">Ke Halaman Dashboard</button>
+    <button onclick="navigateTo('login.php')">Ke Halaman Login</button>
+
+    <script>
+        function navigateTo(page) {
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('BukuTamu/page')) {
+                window.location.href = page; // Menggunakan 'base.php' atau 'login.php' langsung
+            } else {
+                window.location.href = 'page/' + page; // Menggunakan path lengkap
+            }
+        }
+    </script>
 </body>
 </html>
